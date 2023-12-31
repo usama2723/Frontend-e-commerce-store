@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      {location.pathname !== '/signup' && location.pathname !== '/signin'  && location.pathname !== '/addtocart' && <Navbar />}
+      {location.pathname !== '/signup' && location.pathname !== '/signin'  && location.pathname !== '/addtocart'  && location.pathname !== '/checkout'  && <Navbar />}
       {children}
      
     

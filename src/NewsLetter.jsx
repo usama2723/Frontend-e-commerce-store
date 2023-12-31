@@ -12,10 +12,7 @@ const NewsLetter = () => {
       Email: email,
 
     }
-    // localStorage.setItem('user', JSON.stringify(Obj));
-    // const result = JSON.parse(localStorage.getItem('user')) || [];
-    // console.log(result);
- 
+
     const users = JSON.parse(localStorage.getItem('users')) || [];
 
         const found = users.find(user => user.Email === Obj.Email)
@@ -35,10 +32,10 @@ const NewsLetter = () => {
     setEmail(e.target.value);
 
   }
-  
+
   return (
-    <div className="bg-accentDark ">
-      <div className="container py-8 flex flex-col md:flex-row justify-between items-center gap-4 text-white">
+    <div className="container  bg-accentDark ">
+      <div className="container py-8 flex flex-col sm:flex-row  justify-between items-center gap-4 text-white">
         <div className="flex flex-shrink-0 items-center gap-4">
           <LuMailOpen className="text-[60px]" />
           <div>
@@ -50,17 +47,17 @@ const NewsLetter = () => {
             </p>
           </div>
         </div>
-        <form onSubmit={Subscribtion} className="w-full max-w-[500px] relative">
+        <form onSubmit={Subscribtion} className= " flex w-full max-w-[50%]  relative">
           <input value={email} onChange={(e) => emailHandler(e)}
-            className="py-4 px-6 w-full rounded-full text-black"
+            className="py-4 px-6 w-full  rounded-full text-black"
             type="email" required
             placeholder="Your Email Address..."
           />
           <button className="bg-accentDark absolute top-[50%] right-2 translate-y-[-50%] py-2 px-4 rounded-full hover:bg-accent">
             Subscribe!
           </button>
-
         </form>
+     
       </div>
     </div>
   )
